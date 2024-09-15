@@ -7,7 +7,6 @@ I want to add a chat class that can implement a Sequential chat workflow and a P
 I want also to enable the AgentGroupChat into receiving such an abstraction so I can inject into it any kind of custom IAgentGroupChat.
 
 ### Tasks:
-- upload the code to github (as oss in an open project) - for fairness and share it with the community
 - create a new branch repository for the hackathon, private. 
 - Share it with the team.
 - add Monaco to view code
@@ -19,7 +18,8 @@ I want also to enable the AgentGroupChat into receiving such an abstraction so I
 - think in other agent workflows that can be implemented and try to implement them
 
 ## DONE
-- Implement the IAgentGroupChat interface
+- upload the code to github (as oss in an open project) - for fairness and share it with the community
+- - Implement the IAgentGroupChat interface
 - Implement the IAgentChat interface
 - Implement the IAgentChatSequential interface
 - Change the AgentGroupChat to implement IAgentGroupChat
