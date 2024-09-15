@@ -59,12 +59,12 @@ class AgenticWorkflowModel : INotifyPropertyChanged
 
     public string Concept
     {
-        get { return Context.Concept; }
+        get { return Context.Code; }
         set
         {
-            if (Context.Concept != value)
+            if (Context.Code != value)
             {
-                Context.Concept = value;
+                Context.Code = value;
                 UpdateConceptRTB();  // Manually update RichTextBox content
                 OnPropertyChanged("Concept");
             }

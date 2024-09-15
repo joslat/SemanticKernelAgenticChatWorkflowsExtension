@@ -26,12 +26,8 @@ public partial class testWindow02 : Window
     // Store the widths for each expander
     private Dictionary<string, double> expanderWidths = new Dictionary<string, double>
     {
-        { "Concept", 200 },
-        { "Characters", 200 },
-        { "World", 200 },
-        { "Plot", 200 },
-        { "Structure", 200 },
-        { "Configuration", 200 }
+        { "Code", 400 },
+        { "Configuration", 250 }
     };
     private readonly double _collapsedWidth = 56; // Width for the collapsed header
     private AgenticWorkflowModel? agenticWorkflowModel;
@@ -97,16 +93,8 @@ public partial class testWindow02 : Window
         {
             case "Configuration":
                 return PanelColumn1;
-            case "Concept":
-                return ExpanderColumnConcept;
-            case "Characters":
-                return ExpanderColumnCharacters;
-            case "World":
-                return ExpanderColumnWorld;
-            case "Plot":
-                return ExpanderColumnPlot;
-            case "Structure":
-                return ExpanderColumnStructure;
+            case "Code":
+                return ExpanderColumnCode;
             default:
                 return null;
         }
@@ -154,7 +142,7 @@ public partial class testWindow02 : Window
             if (ConceptRTB != null)
             {
                 TextRange textRange = new TextRange(ConceptRTB.Document.ContentStart, ConceptRTB.Document.ContentEnd);
-                Context.Concept = textRange.Text.Trim();  // Sync RichTextBox content with Concept property at source
+                Context.Code = textRange.Text.Trim();  // Sync RichTextBox content with Concept property at source
             }
         }
         catch (TaskCanceledException)

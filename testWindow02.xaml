@@ -34,8 +34,8 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Title: NovelCrafter -->
-            <TextBlock Text="NovelCrafter" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <!-- Title:  -->
+            <TextBlock Text="Agentic Chat Workflows " FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0"/>
 
             <!-- Workflow Dropdown on the Right Side -->
             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,10,0">
@@ -89,22 +89,15 @@
             <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" x:Name="ExpanderColumnConcept"/>
+                        <ColumnDefinition Width="*" x:Name="ExpanderColumnCode"/>
                         <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="Auto" x:Name="ExpanderColumnCharacters"/>
-                        <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="Auto" x:Name="ExpanderColumnWorld"/>
-                        <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="Auto" x:Name="ExpanderColumnPlot"/>
-                        <ColumnDefinition Width="5"/>
-                        <ColumnDefinition Width="Auto" x:Name="ExpanderColumnStructure"/>
                     </Grid.ColumnDefinitions>
 
-                    <!-- Expander 2: Concept -->
-                    <Expander Header="Concept" ExpandDirection="Right" IsExpanded="False" Grid.Column="0" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
+                    <!-- Expander 2: Code -->
+                    <Expander Header="Code" ExpandDirection="Right" IsExpanded="True" Grid.Column="0" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
                         <Expander.HeaderTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Concept" FontSize="12" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Margin="0,40,0,0" TextAlignment="Right">
+                                <TextBlock Text="Code" FontSize="12" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Margin="0,40,0,0" TextAlignment="Right">
                                     <TextBlock.RenderTransform>
                                         <RotateTransform Angle="-90"/>
                                     </TextBlock.RenderTransform>
@@ -118,7 +111,7 @@
                             </Grid.RowDefinitions>
 
                             <!-- Description (fixed height) -->
-                            <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Grid.Row="0" Height="60" Margin="10"/>
+                            <TextBlock Text="The code to craft or to evolve, put code to improve or leave blank." Grid.Row="0" Height="60" Margin="10"/>
 
                             <!-- RichTextBox (stretches) -->
                             <RichTextBox x:Name="ConceptRTB" Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10" 
@@ -127,117 +120,8 @@
                         </Grid>
                     </Expander>
 
-                    <!-- GridSplitter between Expander Concept and Characters -->
                     <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" Background="Gray" VerticalAlignment="Stretch"/>
 
-                    <!-- Expander 3: Characters -->
-                    <Expander Header="Characters" ExpandDirection="Right" IsExpanded="False" Grid.Column="2" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
-                        <Expander.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="Characters" FontSize="12" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Margin="0,40,0,0" TextAlignment="Right">
-                                    <TextBlock.RenderTransform>
-                                        <RotateTransform Angle="-90"/>
-                                    </TextBlock.RenderTransform>
-                                </TextBlock>
-                            </DataTemplate>
-                        </Expander.HeaderTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <!-- Description (fixed height) -->
-                            <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Grid.Row="0" Height="60" Margin="10"/>
-
-                            <!-- RichTextBox (stretches) -->
-                            <RichTextBox x:Name="CharactersRTB" Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10"/>
-                        </Grid>
-                    </Expander>
-
-                    <!-- GridSplitter between Expander Characters and World -->
-                    <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" Background="Gray" VerticalAlignment="Stretch"/>
-
-                    <!-- Expander 4: World -->
-                    <Expander Header="World" ExpandDirection="Right" IsExpanded="False" Grid.Column="4" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
-                        <Expander.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="World" FontSize="12" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Margin="0,40,0,0" TextAlignment="Right">
-                                    <TextBlock.RenderTransform>
-                                        <RotateTransform Angle="-90"/>
-                                    </TextBlock.RenderTransform>
-                                </TextBlock>
-                            </DataTemplate>
-                        </Expander.HeaderTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <!-- Description (fixed height) -->
-                            <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Grid.Row="0" Height="60" Margin="10"/>
-
-                            <!-- RichTextBox (stretches) -->
-                            <RichTextBox x:Name="WorldRTB" Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10"/>
-                        </Grid>
-                    </Expander>
-
-                    <!-- GridSplitter between Expander World and Plot -->
-                    <GridSplitter Grid.Column="5" Width="5" HorizontalAlignment="Stretch" Background="Gray" VerticalAlignment="Stretch"/>
-
-                    <!-- Expander 5: Plot -->
-                    <Expander Header="Plot" ExpandDirection="Right" IsExpanded="False" Grid.Column="6" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
-                        <Expander.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="Plot" FontSize="12" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Margin="0,40,0,0" TextAlignment="Right">
-                                    <TextBlock.RenderTransform>
-                                        <RotateTransform Angle="-90"/>
-                                    </TextBlock.RenderTransform>
-                                </TextBlock>
-                            </DataTemplate>
-                        </Expander.HeaderTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <!-- Description (fixed height) -->
-                            <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Grid.Row="0" Height="60" Margin="10"/>
-
-                            <!-- RichTextBox (stretches) -->
-                            <RichTextBox x:Name="PlotRTB" Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10"/>
-                        </Grid>
-                    </Expander>
-
-                    <!-- GridSplitter between Expander Plot and Structure -->
-                    <GridSplitter Grid.Column="7" Width="5" HorizontalAlignment="Stretch" Background="Gray" VerticalAlignment="Stretch"/>
-
-                    <!-- Expander 6: Structure -->
-                    <Expander Header="Structure" ExpandDirection="Right" IsExpanded="False" Grid.Column="8" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
-                        <Expander.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="Structure" FontSize="12" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Margin="0,40,0,0" TextAlignment="Right">
-                                    <TextBlock.RenderTransform>
-                                        <RotateTransform Angle="-90"/>
-                                    </TextBlock.RenderTransform>
-                                </TextBlock>
-                            </DataTemplate>
-                        </Expander.HeaderTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <!-- Description (fixed height) -->
-                            <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Grid.Row="0" Height="60" Margin="10"/>
-
-                            <!-- RichTextBox (stretches) -->
-                            <RichTextBox x:Name="StructureRTB" Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="10"/>
-                        </Grid>
-                    </Expander>
                 </Grid>
             </ScrollViewer>
 
@@ -250,7 +134,7 @@
                     <RowDefinition Height="*"/>
                     <!-- For ResponseBox (Upper Part) -->
                     <RowDefinition Height="5"/>
-                    <!-- GridSplitter between ResponseBox and QuestionBox -->
+                    <!-- GridSplitter  -->
                     <RowDefinition Height="Auto"/>
                     <!-- For QuestionBox and AskButton (Lower Part) -->
                 </Grid.RowDefinitions>

@@ -108,7 +108,7 @@ public static class CodeCrafterWorkflowChatFactory
 
                 ## Existing code
                 The existing code is:
-                {Context.Concept}
+                {Context.Code}
                 """,
 
             Name = "CodeCrafterAgent",
@@ -141,7 +141,7 @@ public static class CodeCrafterWorkflowChatFactory
         public void UpdateTheCode(
             [Description("The code segment.")] string code)
         {
-            Context.Concept = code;
+            Context.Code = code;
         }
     }
 }
