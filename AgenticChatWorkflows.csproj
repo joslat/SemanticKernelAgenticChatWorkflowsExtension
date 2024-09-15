@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Azure.AI.OpenAI" Version="2.0.0-beta.5" />
+	<PackageReference Include="Azure.AI.OpenAI.Assistants" Version="1.0.0-beta.4" />
+	<PackageReference Include="Azure.Core" Version="1.43.0" />
+	<PackageReference Include="Microsoft.SemanticKernel" Version="1.19.0" />
+	<PackageReference Include="Microsoft.SemanticKernel.Agents.Core" Version="1.19.0-alpha" />
+	<PackageReference Include="Microsoft.SemanticKernel.Agents.OpenAI" Version="1.19.0-alpha" />
+	<PackageReference Include="Microsoft.SemanticKernel.Connectors.OpenAI" Version="1.19.0" />
+	<PackageReference Include="Microsoft.SemanticKernel.Core" Version="1.19.0" />
+	<PackageReference Include="Microsoft.SemanticKernel.Plugins.Web" Version="1.19.0-alpha" />
+  </ItemGroup>
+
+</Project>
