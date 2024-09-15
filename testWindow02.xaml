@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgenticChatWorkflows"
         mc:Ignorable="d"
-        Title="testWindow02" Height="450" Width="800">
+        Title="testWindow02" Height="450" Width="2200">
 
     <Window.Resources>
         <local:StringToFlowDocumentConverter x:Key="StringToFlowDocumentConverter" />
@@ -56,9 +56,9 @@
             <!-- Existing grid content should be placed inside this new grid -->
             <Grid.ColumnDefinitions>
                 <!-- Define columns: one for Expander 1, one for the Expanders 2-6 (scrollable), and one for the ChatPanel -->
-                <ColumnDefinition Width="Auto" x:Name="PanelColumn1"/>
+                <ColumnDefinition Width="Auto" MinWidth="350"  x:Name="PanelColumn1"/>
                 <ColumnDefinition Width="5"/>
-                <ColumnDefinition Width="*" x:Name="PanelColumnScrollable"/>
+                <ColumnDefinition Width="*" MinWidth="450"  x:Name="PanelColumnScrollable"/>
                 <ColumnDefinition Width="5"/>
                 <ColumnDefinition Width="*" MinWidth="350" x:Name="ChatPanelColumn"/>
             </Grid.ColumnDefinitions>
@@ -91,6 +91,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" x:Name="ExpanderColumnCode"/>
                         <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
                     <!-- Expander 2: Code -->
