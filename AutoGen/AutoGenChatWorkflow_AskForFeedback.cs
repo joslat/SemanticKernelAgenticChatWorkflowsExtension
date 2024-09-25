@@ -92,13 +92,6 @@ public class NestedChatReviewerMiddleware : IMiddleware
             {messageToReview.GetContent()}
             """;
 
-        var criticReviewTask = critic.SendAsync(
-            receiver: CriticWrapperAgent,
-            message: reviewPrompt,
-            maxRound: 1)
-            .ToListAsync()
-            .AsTask();
-
         var ethicsReviewTask = critic.SendAsync(
             receiver: EthicsReviewerAgent,
             message: reviewPrompt,
@@ -129,21 +122,18 @@ public class NestedChatReviewerMiddleware : IMiddleware
 
         // Await all review tasks to enable parallel execution
         await Task.WhenAll(
-            criticReviewTask,
             ethicsReviewTask,
             legalReviewTask,
             seoReviewTask,
             styleReviewTask);
 
-        var criticReview = await criticReviewTask;
         var ethicsReview = await ethicsReviewTask;
         var legalReview = await legalReviewTask;
         var seoReview = await seoReviewTask;
         var styleReview = await styleReviewTask;
 
         // Combine reviews from all agents
-        var allReviews = criticReview
-            .Concat(ethicsReview)
+        var allReviews = ethicsReview
             .Concat(legalReview)
             .Concat(seoReview)
             .Concat(styleReview);
