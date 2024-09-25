@@ -140,6 +140,7 @@ class AgenticWorkflowModel : INotifyPropertyChanged
             { WorkflowType.SequentialAgentChatWorkflow, "Sequential Agent Workflow" },
             { WorkflowType.SequentialTwoAgentChatWorkflow, "Sequential Two Agent Workflow" },
             { WorkflowType.NestedChatWithGroupAgentChatWorkflow, "Nested Chat with Group Agent Chat Agent Workflow" },
+            { WorkflowType.AutoGenPluginChatWorkflow, "AutoGen Plugin Chat Workflow" }
         };
     }
 
@@ -173,6 +174,10 @@ class AgenticWorkflowModel : INotifyPropertyChanged
 
             case WorkflowType.CodeCrafterAgentChatWorkflow:
                 ChatWorkflow = CodeCrafterWorkflowChatFactory.CreateChat(CharacterLimit);
+                break;
+
+            case WorkflowType.AutoGenPluginChatWorkflow:
+                ChatWorkflow = SemanticKernelWithAutoGenPluginChatFactory.CreateChat(CharacterLimit);
                 break;
 
             default:

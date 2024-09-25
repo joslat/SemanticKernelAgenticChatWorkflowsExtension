@@ -15,4 +15,5 @@ public enum WorkflowType
     SequentialTwoAgentChatWorkflow,
     NestedChatWithGroupAgentChatWorkflow,
     CodeCrafterAgentChatWorkflow,
+    AutoGenPluginChatWorkflow
 }
