@@ -20,7 +20,7 @@ I have implemented some interfaces so to extend Semantic Kernel and implement se
 - Tried to implement a Middleware pattern as it is in AutoGen.NET but did not fully work. Got stuck with some things I could not extend...
 
 ## Application
-I have created a WPF application based on a sample from Marco Cassalaina exhibited in the Cozy AI Kitchen series from John Maeda.
+I have created a WPF application based on a sample from Marco Casalaina exhibited in the Cozy AI Kitchen series from John Maeda.
 Sources:
 https://www.youtube.com/watch?v=7VCkdxKNBl4
 https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-exploring-multi-agent-ai-systems/ba-p/4226593
@@ -28,6 +28,11 @@ https://github.com/mcasalaina/QuestionnaireMultiagent
 
 I have extended a bit to plug dynamically different chat workflows and to be able to change the chat workflow on the fly.
 Also improved the UI to my liking and needs.
+
+## Idea
+I'd like to thank Chris Rickman, https://github.com/crickman, a Microsoft Principal Software Engineer working on the Semantic Kernel team, 
+for the great discussions and his suggestions on how to extend Semantic Kernel which leaded to this repository.
+
 
 ## Current implementations (in UI, and workflow providers)
 - Code Crafter workflow (single  - agent) - to improve or program some code
