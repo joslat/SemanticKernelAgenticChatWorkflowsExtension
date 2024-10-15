@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgenticChatWorkflows"
         mc:Ignorable="d"
-        Title="testWindow02" Height="450" Width="2200">
+        Title="Semantic Kernel Extensions" Height="450" Width="2200">
 
     <Window.Resources>
         <local:StringToFlowDocumentConverter x:Key="StringToFlowDocumentConverter" />
@@ -35,7 +35,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Title:  -->
-            <TextBlock Text="Agentic Chat Workflows " FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBlock Text="Agentic Chat Workflow Extensions " FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0"/>
 
             <!-- Workflow Dropdown on the Right Side -->
             <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,10,0">
